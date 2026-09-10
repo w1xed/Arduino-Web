@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Урок 1</title>
+
+  <link rel="stylesheet" href="7.css" />
+</head>
+
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+             <a href="main.html">Главная</a>
+        </div>
+        <nav>
+            <a href="2.html">Проект</a>
+            <a href="test.html">Arduino</a>
+            <a href="4.html">Справочник</a>
+            <a href="5.html">Уроки</a>
+            <a href="8.html">Видео уроки</a>
+            <a href="9.html">Сборка конструкций</a>
+
+        </nav>
+    </header>
+
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 1 — LED </title>
+  <link rel="stylesheet" href="7.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<body>
+ 
+  <main class="lesson-page">
+    <section class="lesson-hero">
+      <h1>Урок 1 — Светодиод</h1>
+      <p>В этом уроке ты узнаешь, как заставить светодиод мигать с помощью Arduino.</p>
+    </section>
+
+    <section class="lesson-video">
+      <h2>🎥 Видео урок</h2>
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Твой браузер не поддерживает видео.
+      </video>
+    </section>
+
+    <section class="lesson-code">
+      <h2>💻 Команды Arduino</h2>
+      <pre><code class="language-cpp">
+int led = 5;
+
+void setup() {
+  pinMode(5, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(led, HIGH);
+  delay(1000);
+  digitalWrite(led, LOW);
+  delay(1000);
+}
+      </code></pre>
+    </section>
+
+    <section class="lesson-scheme">
+      <h2>🧩 Макетная схема</h2>
+      <img src="scheme.png" alt="Схема подключения" class="scheme-image">
+    </section>
+
+   <section class="lesson-summary">
+  <h2>📘 Описание</h2>
+  <div class="summary-box">
+    <p>
+      Светодиод (LED) подключается к плате <strong>Arduino Uno</strong> с помощью резистора и нескольких проводов на макетной плате. 
+      Для этого понадобятся: сама плата <strong>Arduino</strong>, светодиод, резистор на <strong>220 Ом</strong>, макетная плата и два соединительных провода. 
+      Длинная ножка светодиода — это <strong>анод (плюс)</strong>, короткая — <strong>катод (минус)</strong>. 
+      Короткая ножка соединяется с одним концом резистора, а другой конец резистора подключается к выводу <strong>GND</strong> (земле) Arduino. 
+      Длинная ножка соединяется с цифровым пином <strong>5</strong> на плате. 
+      Таким образом, схема выглядит так: 
+      Arduino pin 5 → анод LED → катод LED → резистор → GND.
+      Когда на пин 5 подается высокий уровень сигнала HIGH, светодиод загорается, 
+      а при низком уровне LOW — гаснет. 
+      Резистор необходим для ограничения тока, чтобы защитить светодиод от перегрузки.
+    </p>
+  </div>
+</section>
+
+
+  <footer>
+        <p>© 2025 Arduino Studio. Материалы сайта защищены авторским правом.</p>
+  </footer>
+
+
+
+
+
+
+</body>
+</html>
+
+ 

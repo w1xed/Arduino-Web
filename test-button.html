@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Тест кнопки Подробнее</title>
+<style>
+  body{font-family:Inter,Arial, sans-serif; padding:40px; background:#f7fbfc;}
+  .lesson-card{display:flex; gap:20px; align-items:flex-start; background:#fff; padding:24px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,.06); max-width:900px;}
+  .led-image img{width:160px; border-radius:8px;}
+  .text-content{max-width:600px;}
+  .detail-button{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px 22px; border-radius:28px; text-decoration:none; color:#fff;
+    background:linear-gradient(90deg,#00a6c7,#00d1e0); box-shadow:0 6px 12px rgba(0,0,0,.12);
+    position:relative; overflow:visible; cursor:pointer;
+  }
+  .detail-button::before{
+    content:""; position:absolute; top:0; left:-120%; width:120%; height:100%;
+    background:linear-gradient(120deg, rgba(255,255,255,.35), rgba(255,255,255,0) 70%);
+    transform:skewX(-20deg); transition:left .55s; pointer-events:none; z-index:-1;
+  }
+  .detail-button:hover::before{ left:200%; }
+  .detail-button:hover{ transform:translateY(-3px); box-shadow:0 14px 28px rgba(0,0,0,.18); }
+
+  .detail-button{ z-index:9999; }
+</style>
+</head>
+<body>
+
+<div class="lesson-card">
+  <div class="led-image"><img src="https://via.placeholder.com/220x140.png?text=LED" alt="LED"></div>
+  <div class="text-content">
+    <h2>💡 Светодиод</h2>
+    <p>Краткое описание урока — тестовая карточка.</p>
+  </div>
+
+  <a href="7.html" class="detail-button" id="testDetail">Подробнее</a>
+</div>
+
+<script>
+  document.getElementById('testDetail').addEventListener('click', function(e){
+    console.log('Клик по кнопке detail-button, href=', this.getAttribute('href'));
+    
+  });
+</script>
+
+</body>
+</html>

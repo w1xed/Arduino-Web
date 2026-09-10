@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #007AFF;
+}
+
+nav a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f5f5f7);
+  padding-top: 120px; 
+}
+
+.hero-content {
+  text-align: left;
+  padding-left: 80px;
+  padding-right: 60px;
+  max-width: 700px;
+  margin-top: -200px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+  border-top: 1px solid #eee;
+  margin-top: 500px;
+
+}
+
+.hero-image {
+  display: block;
+  margin-top: -100px;
+  margin-left: 100px;
+  width: 500px;
+  max-width: 90%;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+img {
+  display: block;
+  margin: 60px auto;
+  max-width: 400px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+.popup-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(60px);
+  width: 500px;
+  padding: 70px 30px;
+  border-radius: 42px;
+  background: linear-gradient(145deg, #f5f6f8, #d0d2d6);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+  cursor: default;
+  z-index: 2000;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
+.popup-center.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.popup-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0b1220;
+}
+
+.popup-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.popup-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+
+.instagram-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.telegram-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.telegram-icon {
+  background: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg') no-repeat center;
+  background-size: 78%; 
+  margin-right: 60px; 
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.instagram-icon {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-mask: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url('https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg') no-repeat center;
+  mask-size: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+
+.navbar {
+  position: relative;
+  z-index: 3000;
+}
+
+.popup-center {
+  z-index: 1000; 
+}
+
+.popup-item:first-child span {
+  display: inline-block;
+  transform: translateX(-60px); 
+}

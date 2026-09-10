@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Команды Arduino — Полная таблица</title>
+
+  <link rel="stylesheet" href="4.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+             <a href="main.html">Главная</a>
+        </div>
+        <nav>
+            <a href="2.html">Проект</a>
+            <a href="test.html">Arduino</a>
+            <a href="4.html">Справочник</a>
+            <a href="5.html">Уроки</a>
+            <a href="8.html">Видео уроки</a>
+            <a href="9.html">Сборка конструкций</a>
+
+        </nav>
+    </header>
+
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Все команды Arduino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📘 Полная таблица команд Arduino</h1>
+  <p class="desc">Все основные команды Arduino, разделённые по категориям для удобства изучения и использования.</p>
+
+  <table class="arduino-table">
+    <thead>
+      <tr>
+        <th>Категория</th>
+        <th>Команда</th>
+        <th>Описание</th>
+        <th>Пример</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr><td rowspan="7" class="category">⚙️ Настройка пинов</td>
+        <td><code>pinMode(pin, mode);</code></td><td>Настройка режима работы пина.</td><td><code>pinMode(13, OUTPUT);</code></td></tr>
+      <tr><td><code>digitalWrite(pin, value);</code></td><td>Установить HIGH или LOW.</td><td><code>digitalWrite(13, HIGH);</code></td></tr>
+      <tr><td><code>digitalRead(pin);</code></td><td>Прочитать состояние пина.</td><td><code>digitalRead(2);</code></td></tr>
+      <tr><td><code>analogRead(pin);</code></td><td>Считать аналоговый сигнал (0–1023).</td><td><code>analogRead(A0);</code></td></tr>
+      <tr><td><code>analogWrite(pin, value);</code></td><td>Выдать PWM-сигнал (0–255).</td><td><code>analogWrite(9, 128);</code></td></tr>
+      <tr><td><code>tone(pin, freq);</code></td><td>Генерация звука.</td><td><code>tone(8, 1000);</code></td></tr>
+      <tr><td><code>noTone(pin);</code></td><td>Остановить звук.</td><td><code>noTone(8);</code></td></tr>
+
+      <tr><td rowspan="8" class="category">🔢 Переменные и типы данных</td>
+        <td><code>int</code></td><td>Целое число.</td><td><code>int x = 5;</code></td></tr>
+      <tr><td><code>float</code></td><td>Дробное число.</td><td><code>float t = 23.5;</code></td></tr>
+      <tr><td><code>double</code></td><td>Длинное дробное (или float).</td><td><code>double y = 3.1415;</code></td></tr>
+      <tr><td><code>char</code></td><td>Один символ.</td><td><code>char c = 'A';</code></td></tr>
+      <tr><td><code>String</code></td><td>Строка текста.</td><td><code>String s = "Hello";</code></td></tr>
+      <tr><td><code>boolean</code></td><td>Истина/ложь.</td><td><code>boolean flag = true;</code></td></tr>
+      <tr><td><code>byte</code></td><td>Беззнаковое 0–255.</td><td><code>byte b = 255;</code></td></tr>
+      <tr><td><code>const</code></td><td>Константа.</td><td><code>const int LED = 13;</code></td></tr>
+
+      <tr><td rowspan="4" class="category">⏱️ Время и задержки</td>
+        <td><code>delay(ms);</code></td><td>Пауза в миллисекундах.</td><td><code>delay(1000);</code></td></tr>
+      <tr><td><code>delayMicroseconds(us);</code></td><td>Пауза в микросекундах.</td><td><code>delayMicroseconds(500);</code></td></tr>
+      <tr><td><code>millis();</code></td><td>Время с запуска (мс).</td><td><code>millis();</code></td></tr>
+      <tr><td><code>micros();</code></td><td>Время с запуска (мкс).</td><td><code>micros();</code></td></tr>
+
+      <tr><td rowspan="7" class="category">🔁 Управляющие конструкции</td>
+        <td><code>if / else</code></td><td>Условие.</td><td><code>if(a>10){...} else {...}</code></td></tr>
+      <tr><td><code>for()</code></td><td>Цикл по счётчику.</td><td><code>for(int i=0;i<5;i++){...}</code></td></tr>
+      <tr><td><code>while()</code></td><td>Цикл с условием.</td><td><code>while(x<10){...}</code></td></tr>
+      <tr><td><code>do...while()</code></td><td>Цикл с постусловием.</td><td><code>do {...} while(x<5);</code></td></tr>
+      <tr><td><code>switch...case</code></td><td>Выбор вариантов.</td><td><code>switch(x){case 1:...;break;}</code></td></tr>
+      <tr><td><code>break</code></td><td>Прервать цикл.</td><td><code>break;</code></td></tr>
+      <tr><td><code>continue</code></td><td>Пропустить итерацию.</td><td><code>continue;</code></td></tr>
+
+      <tr><td rowspan="6" class="category">💬 Последовательный порт</td>
+        <td><code>Serial.begin(9600);</code></td><td>Инициализация порта.</td><td><code>Serial.begin(9600);</code></td></tr>
+      <tr><td><code>Serial.print();</code></td><td>Вывод без новой строки.</td><td><code>Serial.print("Hi");</code></td></tr>
+      <tr><td><code>Serial.println();</code></td><td>Вывод с новой строки.</td><td><code>Serial.println("Hi");</code></td></tr>
+      <tr><td><code>Serial.read();</code></td><td>Считать байт.</td><td><code>Serial.read();</code></td></tr>
+      <tr><td><code>Serial.available();</code></td><td>Проверить наличие данных.</td><td><code>if(Serial.available())...</code></td></tr>
+      <tr><td><code>Serial.write();</code></td><td>Отправить байт/данные.</td><td><code>Serial.write(65);</code></td></tr>
+
+      <tr><td rowspan="10" class="category">🧮 Математические функции</td>
+        <td><code>min(a,b);</code></td><td>Минимум.</td><td><code>min(3,7);</code></td></tr>
+      <tr><td><code>max(a,b);</code></td><td>Максимум.</td><td><code>max(3,7);</code></td></tr>
+      <tr><td><code>abs(x);</code></td><td>Модуль числа.</td><td><code>abs(-5);</code></td></tr>
+      <tr><td><code>constrain(x,a,b);</code></td><td>Ограничение диапазона.</td><td><code>constrain(x,0,255);</code></td></tr>
+      <tr><td><code>map(x,in1,in2,out1,out2);</code></td><td>Пересчёт диапазона.</td><td><code>map(val,0,1023,0,255);</code></td></tr>
+      <tr><td><code>pow(x,y);</code></td><td>Степень.</td><td><code>pow(2,3);</code></td></tr>
+      <tr><td><code>sqrt(x);</code></td><td>Квадратный корень.</td><td><code>sqrt(9);</code></td></tr>
+      <tr><td><code>sin(x);</code></td><td>Синус (в радианах).</td><td><code>sin(PI/2);</code></td></tr>
+      <tr><td><code>cos(x);</code></td><td>Косинус.</td><td><code>cos(0);</code></td></tr>
+      <tr><td><code>tan(x);</code></td><td>Тангенс.</td><td><code>tan(PI/4);</code></td></tr>
+
+      <tr><td rowspan="2" class="category">🧱 Основные функции</td>
+        <td><code>void setup()</code></td><td>Запускается один раз.</td><td><code>void setup(){pinMode(13,OUTPUT);}</code></td></tr>
+      <tr><td><code>void loop()</code></td><td>Бесконечный цикл.</td><td><code>void loop(){digitalWrite(13,HIGH);}</code></td></tr>
+
+      <tr><td rowspan="4" class="category">⚡ Прерывания</td>
+        <td><code>attachInterrupt(pin, ISR, mode);</code></td><td>Подключить прерывание.</td><td><code>attachInterrupt(0, blink, RISING);</code></td></tr>
+      <tr><td><code>detachInterrupt(pin);</code></td><td>Отключить прерывание.</td><td><code>detachInterrupt(0);</code></td></tr>
+      <tr><td><code>noInterrupts();</code></td><td>Выключить прерывания.</td><td><code>noInterrupts();</code></td></tr>
+      <tr><td><code>interrupts();</code></td><td>Включить прерывания.</td><td><code>interrupts();</code></td></tr>
+
+      <tr><td rowspan="5" class="category">📦 Побитовые операции</td>
+        <td><code>bitRead(x,n);</code></td><td>Чтение бита.</td><td><code>bitRead(b,2);</code></td></tr>
+      <tr><td><code>bitWrite(x,n,b);</code></td><td>Запись бита.</td><td><code>bitWrite(val,1,1);</code></td></tr>
+      <tr><td><code>bitSet(x,n);</code></td><td>Установить бит.</td><td><code>bitSet(x,2);</code></td></tr>
+      <tr><td><code>bitClear(x,n);</code></td><td>Сбросить бит.</td><td><code>bitClear(x,1);</code></td></tr>
+      <tr><td><code>bit(n);</code></td><td>Возврат 2ⁿ.</td><td><code>bit(3);</code></td></tr>
+
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+ 
